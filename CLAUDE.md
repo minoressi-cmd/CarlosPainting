@@ -33,7 +33,7 @@
 ### Project Config
 
 - **Topology**: hierarchical-mesh
-- **Max Agents**: 15
+- **Max Agents**: 10
 - **Memory**: hybrid
 - **HNSW**: Enabled
 - **Neural**: Enabled
@@ -92,14 +92,14 @@ npm run lint
 ## Swarm Configuration & Anti-Drift
 
 - ALWAYS use hierarchical topology for coding swarms
-- Keep maxAgents at 6-8 for tight coordination
+- Keep maxAgents at 10 for tight coordination
 - Use specialized strategy for clear role boundaries
 - Use `raft` consensus for hive-mind (leader maintains authoritative state)
 - Run frequent checkpoints via `post-task` hooks
 - Keep shared memory namespace for all agents
 
 ```bash
-npx @claude-flow/cli@latest swarm init --topology hierarchical --max-agents 8 --strategy specialized
+npx @claude-flow/cli@latest swarm init --topology hierarchical --max-agents 10 --strategy specialized
 ```
 
 ## Swarm Execution Rules
